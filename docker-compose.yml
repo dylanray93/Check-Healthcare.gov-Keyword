@@ -7,7 +7,7 @@ services:
             - POSTGRES_PASSWORD=airflow
             - POSTGRES_DB=airflow
     webserver:
-        image: dylantest/airflow
+        image: dylanray93/dylan_airflow_image
         entrypoint: ./scripts/entrypoint.sh
         deploy:
             restart_policy:
@@ -24,7 +24,7 @@ services:
         ports:
             - "8080:8080"
     scheduler:
-        image: dylantest/airflow
+        image: dylanray93/dylan_airflow_image
         command: scheduler
         deploy:
             restart_policy:
